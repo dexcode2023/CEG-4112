@@ -5,11 +5,11 @@ import torch
 
 app = Flask(__name__)
 
-# Load the pretrained ResNet-50 model
+
 model = models.resnet50(pretrained=True)
 model.eval()
 
-# Define the image transformation
+
 transform = transforms.Compose([
     transforms.Resize(256),
     transforms.CenterCrop(224),
